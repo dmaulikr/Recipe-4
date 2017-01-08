@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GroceryItem" representedClassName=".GroceryItem" syncable="YES">
+        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemQuantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="groceryList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroceryList" inverseName="groceryItems" inverseEntity="GroceryList" syncable="YES"/>
+    </entity>
+    <entity name="GroceryList" representedClassName=".GroceryList" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="groceryItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GroceryItem" inverseName="groceryList" inverseEntity="GroceryItem" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GroceryItem" positionX="-18" positionY="36" width="128" height="90"/>
+        <element name="GroceryList" positionX="18" positionY="90" width="128" height="75"/>
+    </elements>
+</model>
